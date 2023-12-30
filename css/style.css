@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    padding: 0;
+    animation-name: example;
+    animation-duration: 4s; 
+
+  }
+  
+  header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    align-items: left;
+    position: relative;
+    z-index: 1; /* Set z-index for the header */
+  }
+
+  header img{
+    opacity: 100%;
+    height: 50px;
+    margin-right: 20px;
+    animation-name: example;
+    animation-duration: 4s;
+  } 
+  
+  nav {
+    background-color: #5C326C;
+    color: white;
+    text-align: center;
+    padding-left: 0.5em; /* Adjust the padding to change the width */
+    padding-right: 0.5em; /* Adjust the padding to change the width */
+    padding: 1em;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Set a higher z-index for the navigation */
+    width: 65%;
+  }
+
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    z-index: 1000;
+    /* Add any additional styles you want for the fixed navigation */
+  }
+  header.is-visible {
+    opacity: 1; /* Fade in when class is added */
+  }
+  nav ul {
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 10;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Adjust the height as needed */
+  }
+  
+  nav ul li {
+    margin: 0 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    
+  }
+  
+  nav ul li a:hover {
+    color: black;
+    
+  }
+
+  .business-section {
+    position: relative;
+    opacity: 100;
+    animation-duration: 4s;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .business-section img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    opacity: 100%;
+    animation-name: example;
+    animation-duration: 4s;
+    filter: saturate(50%);
+  }
+  
+  .business-section h3,
+  .business-section h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .business-section h3 {
+    font-weight: 100px;
+    font-size: 0.9rem;
+  }
+  
+  .business-section h2 {
+    font-weight: 700px;
+    font-size: 2rem;
+  }
+  
+  .business-section .business-text button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: #5C326C;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 21px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .business-section .business-text button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .business-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    color: white;
+    padding: 20px;
+  }
+  .overlay-grid {
+    position: absolute;
+    top: 80%;
+    left: -100%;
+    right: 50%;
+    width: 82%; /* Adjust to half the image width */
+    height: 100%; /* Adjust to half the image height */
+    background-color: white;
+    z-index: 1; /* Place the grid above the image */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Divide the grid into 2 equal columns */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25); /* Adjust shadow size and intensity */
+    transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Adjust the timing function for a smoother transition */
+  }
+  .overlay-grid.show-overlay {
+    left: 0; 
+  }
+
+  .grid-cell1 img {
+    position: absolute;
+    height: 25em;
+    margin: 1em;
+    width: auto;
+  }
+  .segmento_section {
+    text-align: center; 
+    margin: auto; 
+    max-width: 900px; 
+  }
+
+
+  .segmento_section h3,
+  .segmento_section h2{
+    font-family: 'Poppins', sans-serif;
+  }
+  .segmento_section h2{
+    font-size: 1.5em;
+    margin-bottom: 3em;
+  }
+
+  .segmento_section h3{
+    font-size: 1.0em;
+    margin-bottom: -1em;
+    color: #5C326C;
+  }
+
+  .footer {
+    background-color: black;
+    color: #fff;
+    padding: 3rem 0; /* Adjust padding as needed */
+    display: flex;
+    align-items: center991;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; /* Make the footer span the entire width */
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    margin: 0 2rem;
+    width: 100%;
+}
+
+
+.footer_info {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 0rem;
+}
+
+.footer__disponible,
+.footer__email {
+    margin: 1rem; /* Adjust the margin as needed for spacing between items */
+}
+
+.footer_social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__social-link {
+    margin-right: 1rem; /* Adjust the margin as needed for spacing between social links */
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.separator {
+  height: 1px; /* Line height */
+  background-color: #fff; /* Line color */
+  margin: 0rem 7rem; /* Margin above and below the line */
+}
+
+.copyr {
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer_low {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.slider{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 7em;
+}
+
+.imgContainer{
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  transition: transform 0.7s ease-in-out;
+  margin-bottom: 5px;
+}
+
+.slide_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8em 0 3em;
+}
+
+.slide_div img{
+  position: relative;
+  height: 370px;
+  width: 240px;
+  filter: saturate(10%);
+  object-fit: cover;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide_div.clicked img {
+  transform: scale(1.5); 
+  filter: saturate(100%);
+}
+
+
+
+
+
+
+/* Animations */
+  @keyframes example{
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Optional: Add a vertical slide-in effect */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(); /* Optional: Add a vertical slide-in effect */
+    }
+  }
+
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: initial;
+      align-items: left;
+      text-align: left;
+    }
+  
+    header img {
+      margin-bottom: 20px;
+    }
+
+    nav {
+      display: none;
+    }
+
+  }
+
+ 
+  @media (max-width: 991px) {
+    header {
+      flex-direction: initial;
+      align-items: left;
+      text-align: left;
+    }
+  
+    header img {
+      margin-bottom: 20px;
+    }
+
+    nav {
+      display: none;
+    }
+
+  }
+
+ 
