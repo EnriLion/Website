@@ -41,6 +41,7 @@
     width: 65%;
   }
 
+
   .fixed {
     position: fixed;
     top: 0;
@@ -166,7 +167,7 @@
     left: -100%;
     right: 50%;
     width: 82%; /* Adjust to half the image width */
-    height: 100%; /* Adjust to half the image height */
+    height: 67%; /* Adjust to half the image height */
     background-color: white;
     z-index: 1; /* Place the grid above the image */
     display: grid;
@@ -180,19 +181,33 @@
 
   .grid-cell1 img {
     position: absolute;
-    height: 27em;
+    height: 20em;
     margin: 1em;
     width: auto;
     padding: 1rem;
   }
 
+  .top-grid {
+    grid-column: span 2; /* Span both columns in the overlay-grid */
+    text-align: center;
+    padding: 2.5em;
+    margin-bottom: -10em;
+  }
+
+  .top-grid p{
+    color: #69053E;
+    font-size: 1.3rem;
+    font-family: 'Poppins';
+  }
+
   .grid-cell2 {
     height: auto;
-    margin: 0em;
-    padding: 2em;
+    margin: 2em;
   }
   .grid-cell2 h1 {
     margin-bottom: 2em;
+    font-size: 1.3rem;
+    color: #002B4E
   }
 
   .grid-cell2 p {
@@ -226,7 +241,7 @@
   }
 
   .grid-margin{
-    margin-bottom: 45em;
+    margin-bottom: 30em;
   }
 
   .grid-cell2 h1,
@@ -296,13 +311,6 @@
     }
   }
 
-  .grid-margin img,
-  .grid-margin .circular-list,
-  .grid-margin h2,
-  .grid-margin h1{
-    display: none;
-  } 
-
 
   .grid-container .grid-2 h3,
   .grid-container .grid-2 h2,
@@ -330,10 +338,9 @@
 
   .grid-container .grid-2 button{
     margin-top: 10rem;
-    margin-left: 10rem;
+    margin-left: 16rem;
     align-items: center;
     font-size: 1rem;  
-    margin-bottom: 1rem;
   }
 
   .grid-container .grid-2 button:hover{
@@ -347,22 +354,153 @@
     max-width: 900px; 
   }
 
-
   .segmento_section h3,
-  .segmento_section h2{
+  .segmento_section p{
+     font-family: 'Poppins', sans-serif;
+  }
+  .segmento_section h3{
+     font-size: 1.5em;
+     margin-bottom: 2em;
+     margin-top: 1em;
+     color: black;
+  }
+
+ .segmento_section p{
+     font-size: 1.3em;
+     margin-top: 2em;
+     margin-bottom: 1em;
+     color: #5C326C;
+  }
+
+ .aplicacion_container {
+    display: inline-grid;
+    grid-template-columns: auto auto ;
+    background-color: transparent;
+    padding: 10px;
+    margin: 7rem;
+
+  }
+
+  .cloud_container{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    background-color: #FFD8EE4D;
+    padding: 10px;
+    margin: 7rem;
+  }
+
+  .computer_container{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+    padding: 10px;
+    margin: 7rem;
+  }
+
+  .aplicacion_container .left-content, 
+  .aplicacion_container .right-content,
+  .cloud_container .left-content,
+  .cloud_container .right-content,
+  .computer_container .left-content,
+  .computer_container .right-content {
+    background-color: transparent;
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    font-size: 30px;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
   }
-  .segmento_section h2{
-    font-size: 1.5em;
-    margin-bottom: 2em;
+
+  .aplicacion_container .left-content img {
+    height: 35rem;
+    width: auto;
+    align-items: center;
+  }
+  .aplicacion_container .right-content {
+    height: auto;
+    margin: 0.5em;
+    padding: 1.2em;
+    padding-top: 2.5em;
+
   }
 
-  .segmento_section h3{
-    font-size: 1.0em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    color: #5C326C;
+  .aplicacion_container .right-content h2{
+    margin-bottom: 1em;
+    color: #5C326C
   }
+
+  .aplicacion_container .right-content p{
+    margin-bottom: 0.5em;
+    font-size: 0.7em;
+  }
+
+  .aplicacion_container .right-content button,
+   .cloud_container .left-content button,
+   .computer_container .right-content button{
+    background-color: #002B4E;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 21px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.5em;
+    margin-top: 2.5em;
+  }
+
+  .aplicacion_container .right-content button:hover
+  , .cloud_container .left-content button:hover,
+  .computer_container .right-content button:hover{
+    background-color: #492A63;
+  }
+
+  .cloud_container .left-content{
+    height: auto;
+    margin: 0.5em;
+    padding: 1.2em;
+    padding-top: 2.5em;
+  }
+
+  .cloud_container .left-content h2{
+    margin-bottom: 1em;
+    color: #092D5D;
+  }
+
+  .cloud_container .left-content p{
+    margin-bottom: 0.5em;
+    font-size: 0.6em;
+    color: #051B38;
+  }
+
+  .cloud_container .right-content img{
+    height: 22rem;
+    width: auto;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .computer_container .right-content {
+    height: auto;
+    margin: 0.5em;
+    padding: 0.2em;
+    padding-top: 2.5em;
+  }
+
+  .computer_container .left-content img{
+    height: 22rem;
+    width: auto;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .computer_container .right-content h2{
+    color: #051B38;
+    margin-bottom: 1em;
+  }
+  .computer_container .right-content p{
+    margin-bottom: 0.5;
+    font-size: 0.7em;
+  }
+
 
 
   .grid-video{
@@ -595,25 +733,22 @@
     top: 10px;
     left: 10px;
     z-index: 101; /* Ensure openbtn appears above the sidebar */
-    height: 4.2rem;
 }
 
-  .sidebar.active {
+.sidebar.active {
     display: block;
-  }
 }
+  }
 
   @media  (min-width: 480px) and (max-width: 767px) and (orientation: portrait) {
     header {
       flex-direction: initial;
       align-items: left;
       text-align: left;
-      padding: 2.5em;
     }
   
     header img {
       margin-bottom: 20px;
-      display: none;
     }
 
     nav {
@@ -625,141 +760,41 @@
 
     .grid-container .grid-2 {
      background: linear-gradient(to top, #AB5F98, #492A63); 
-     height: auto;
-     width: 44rem;
-     padding: 0 2.7rem;
+     height: 70rem;
+     width: auto;
+     padding: 0 1.49rem;
     }
 
-    .grid-container .grid-2 img{
-      margin-left: 1rem;
-    }
+  .grid-container .grid-1 {
+    display: none;
 
-
-    .grid-container .grid-1 {
-          display: none;
-    }
-
+   }
    .sidebar {
     display: block; /* Display the sidebar on smaller screens */
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #5C326C; /* Adjust background color */
-    width: 0; /* Adjust width as needed */
+    background-color: #111; /* Adjust background color */
+    padding: 15px;
+    width: 200px; /* Adjust width as needed */
     height: 100%; /* Make it full height */
-    overflow-x: hidden; /* Enable vertical scrolling */
-    padding-top: 15px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional box shadow */
     z-index: 2;
-  }
-
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color:  #f1f1f1;
-    display: block;
-    transition: 0.3s;
-    font-family: 'Poppins';
-  }
-
-  .sidebar a:hover{
-    color: #69053E;
   }
 
   .main {
     margin-left: 0; /* Adjust this value based on your design */
   }
-
   .openbtn {
     display: block;
     position: fixed;
     top: 10px;
     left: 10px;
     z-index: 2; /* Adjust z-index to make sure it's above other elements */
-    color: transparent;
-    height: 4.2rem;
-    animation-name: ex;
-    animation-duration: 2s;
-    animation-delay: 1s;
-  } 
-
-  .slider{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    overflow: hidden;
-    position: relative;
   }
-
-  .imgContainer{
-    width: 46.5rem;
-    height: 59vh;
+ 
   }
-
-  .slide_div {
-    margin: 0 3em 0 3em;
-  }
-  .grid-margin img,
-  .grid-margin .circular-list,
-  .grid-margin h2,
-  .grid-margin h1{
-    display: grid;
-    font-family: 'Poppins';
-  } 
-
-  .grid-margin img{
-    height: 33rem;
-    width: auto;
-    margin: 3rem;
-  } 
-
-  .grid-margin .circular-list{
-    padding: 1rem;
-  }
-
-  .grid-margin .circular-list button{
-    padding-left: 1rem;
-  }
-
-  .grid-margin h2 {
-    text-align: center;
-    color: #AB5F98;
-    font-size: 1rem;
-  }
-
-  .grid-margin h1{
-    text-align: center;
-  }
-
-  .grid-margin p {
-    margin-bottom: 1em;
-  }
-
-  .grid-margin {
-    margin-bottom: 7rem;
-  }
-
-  .grid-video {
-    height: 83rem;
-    width: 3rem;
-    margin-top: 0rem;
-  }
-
-  .grid-video iframe{
-    margin: 1em;
-    width: 40em;
-    height: 29em;
-  }
-
-
-  
-  @keyframes ex {
-    from{ content: url(../img/menu.png); left: -112px;}
-    to{content: url(../img/menu.png); left: 0px; }
-    
-  }
-
-}
 
  
 
@@ -788,7 +823,6 @@
      padding: 0 1.49rem;
     }
 
-
   .grid-container .grid-1 {
     display: none;
 
@@ -803,10 +837,3 @@
   }
 
 }
-
-
-
- 
-
-
- 

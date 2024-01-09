@@ -16,21 +16,59 @@ window.addEventListener('scroll', function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     var overlayGrid = document.querySelector('.overlay-grid');
+    var animationFrame;
     const animatedBusinessText = document.getElementById("animated-business-text");
     let lastScrollTop = 0;
 
-    window.addEventListener('scroll', function () {
-        var scrollPosition = window.scrollY;
-        var triggerPosition = overlayGrid.offsetTop - window.innerHeight / 2;
+    // window.addEventListener('scroll', function () {
+    //     var scrollPosition = window.scrollY;
+    //     var triggerPosition = overlayGrid.offsetTop - window.innerHeight / 2;
 
-        if (scrollPosition > triggerPosition) {
-            overlayGrid.classList.add('show-overlay');
-            overlayGrid.style.left = '10%';
-        } else {
-            overlayGrid.classList.remove('show-overlay');
-            overlayGrid.style.left = '-100%';
-        }
-    });
+    //     if (scrollPosition > triggerPosition) {
+    //         overlayGrid.classList.add('show-overlay');
+    //         overlayGrid.style.left = '10%';
+    //     } else {
+    //         overlayGrid.classList.remove('show-overlay');
+    //         overlayGrid.style.left = '-100%';
+    //     }
+    // });
+    function debounce(func, wait) {
+      let timeout;
+      return function () {
+        const context = this;
+        const args = arguments;
+        const later = function () {
+          timeout = null;
+          func.apply(context, args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+      };
+    }
+
+    function handleScroll() {
+      var scrollPosition = window.scrollY;
+      var triggerPosition = overlayGrid.offsetTop - window.innerHeight / 2;
+  
+      if (scrollPosition > triggerPosition) {
+        overlayGrid.classList.add('show-overlay');
+        overlayGrid.style.left = '10%';
+      } else {
+        overlayGrid.classList.remove('show-overlay');
+        overlayGrid.style.left = '-100%';
+      }
+    }
+  
+    function onScroll() {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+  
+      animationFrame = requestAnimationFrame(handleScroll);
+    }
+    const debouncedScroll = debounce(handleScroll, 16); // Adjust the wait time if needed
+    window.addEventListener('scroll', onScroll);
+
 
     // function playAnimation() {
     //     animatedBusinessText.classList.add("visible");

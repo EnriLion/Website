@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 <body>
     <!-- Header-->
     <header>
-        <img src="img/Gya_icon.png" alt="Gya icon"></a>
+        <a href="index.html"></a><img src="img/Gya_icon.png" alt="Gya icon"></a>
     </header> 
     <!-- Body -->
     <div class="container">
@@ -27,65 +27,23 @@
               </ul>
         </nav>
     </div>
-    <div id="mySidebar" class="sidebar" >
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Nosotros</a>
-        <a href="soluciones.html">Soluciones</a>
-        <a href="clientes.html">Clientes</a>
+    <div class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Soluciones</a>
+        <a href="#">Clientes</a>
         <a href="#">Preguntas frecuentes</a>
     </div>
     <div class="main">
-    <img src="img/Gya_icon.png" alt="Gya icon" class="openbtn" onclick="openNav()"></a>
+    <button class="openbtn" onclick="openNav()"></button>  
     <div class="business-section">
         <img src="img/business_team.jpg" alt="" >
         <div class="business-text slide-in hidden" id="animated-business-text">
-          <h3>Aumenta tu productividad<h3>
-          <h2>Ofrecemos soluciones tecnológicas <br> integrales para impulsar tu negocio <h2>
+          <h3>Testimonios<h3>
+          <h2>Conoce  a todas las empresas que confían<br> en GYA Consulting<h2>
           <button>Solicitar DEMO</button>
         </div>
-    </div>
-    <div class="overlay-grid">
-        <div class="grid-cell1">
-            <img src="img/dynamics_grafico.png" alt="Image Microsoft Dynamics" height="100px">
-        </div>
-        <div class="grid-cell2">
-            <h2>Soluciones Microsoft Dynamics 365</h2>
-            <h1>Adaptamos las herramientas a la medida de tu negocio</h1>
-            <ol class="circular-list">
-            <li><h3>Moderno</h3></li>
-            <p>Dynamics 365 revoluciona los sistemas de CRM y ERP <br>
-            <li><h3>Unificado</h3></li> 
-            <p>La organización dispone de un único repositorio de datos<br>
-            <li><h3>Inteligente</h3></li> 
-            <p>Las organizaciones de conocimientos proactivos que<br>
-                les permite tomar la iniciativa y brindar a los empleados los <br>
-                recursos que necesitan para acelerar los resultados de la empresa
-            </p>
-            <button>Contactar</button>
-            </ol>
-        </div>
-    </div>
-    <div class="grid-margin">
-        <img src="img/dynamics_grafico.png" alt="" height="100px">
-        <h2>Soluciones Microsoft  Dynamics 365</h2>
-        <h1>Adaptamos las herramientas a la medida de tu negocio</h1>
-            <ol class="circular-list">
-            <li><h3>Moderno</h3></li>
-            <p>Dynamics 365 revoluciona los sistemas de CRM y ERP <br>
-            <li><h3>Unificado</h3></li> 
-            <p>La organización dispone de un único repositorio de datos<br>
-            <li><h3>Inteligente</h3></li> 
-            <p>Las organizaciones de conocimientos proactivos que<br>
-                les permite tomar la iniciativa y brindar a los empleados los <br>
-                recursos que necesitan para acelerar los resultados de la empresa
-            </p>
-            <button>Contactar</button>
-            </ol>
-    </div> 
-    <div class="segmento_section">
-          <h3>Segmento de clientes<h3>
-          <h2>Ayudamos a lograr tus objetivos de negocio a diferentes industrias:<h2>
-    </div>
+    </div>  
     <div class="slider">
         <div class="imgContainer">
           <div class="slide_div" onclick="selectSlide(this)">
@@ -99,32 +57,7 @@
           </div>
         </div>
     </div>
-    <div class="grid-container">
-        <div class="grid-1">
-            <img src="img/equipo.png" alt="Image Microsoft Dynamics" height="100px">
-        </div>
-        <div class="grid-2">
-            <ol class="lista-orden">
-            <p class="header">Que contienen nuestros servicios</p>
-            <h1>Utilizamos la metodología SCRUM <br>en todos nuestros procesos</h1>
-            <li><h3>Planificación: Productos Backlog</h3></li>
-            <p>Establecemos tareas prioritarias </p>
-            <li><h3>Ejecución Sprint</h3></li> 
-            <p>Mini proyecto donde se focaliza el desarrollo para alcanzar<br>
-                el objetivo
-            </p>
-            <li><h3>Control:Burn Down</h3></li> 
-            <p>Se mide el progreso de un determinado proyecto</p>
-            <button>Solicitar DEMO</button>
-            </ol>
-        </div>
-    </div>
-    <div class="segmento_section">
-          <h3>Conoce nuestra industria<h3>
-    </div>
-    <div class="grid-video">
-        <iframe width="1000" height="500" src="https://www.youtube.com/embed/TQK_Qp9IJtc?si=gLEprzURFdNz_wAD"  allowfullscreen></iframe>
-    </div>
+   
     <footer class="footer">
         <div class="footer__container container grid">
             <div class="footer_info grid">
@@ -174,8 +107,7 @@
     </div>
     <script>
         function openNav() {
-            document.getElementById("mySidebar").style.width = "250px"; // Adjust the width as needed
-            
+            document.getElementById("mySidebar").style.width = "200px"; // Adjust the width as needed
         }
 
         function closeNav() {
